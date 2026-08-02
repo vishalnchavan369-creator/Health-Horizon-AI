@@ -20,7 +20,6 @@ Health Horizon AI is an AI-powered healthcare platform that helps users manage t
 
 ### Backend
 - Node.js
-- Express.js
 
 ### Database
 - MongoDB
