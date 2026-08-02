@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Finder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js">
+  </script>
+  <link rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+    type="text/css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!--Top Rated Hospitals-->
+  <section class="top-rated mt-5">
+    <div class="container-fluid">
+      <h4 class="heading mb-3 fw-bold text-center">Hospitals In Warje </h4>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <img src="D:\final year  project  1\Hospital-Finder-master\images\mai-mangeshkar-hospital-warje-pune-hospitals-0e5pp22iil.jpg" alt="" width="100%">
+            </div>
+            <div class="card-footer">
+              <div class="hname fw-bold">
+                Mai Mangeshkar Hospital
+              </div>
+              <div class="review">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+              <div class="location">
+                Survey No 117/1, Mumbai Bangalore Highway, Warje, Pune - 411058 (Opposite Popular Nagar, Near Cipla Foundation)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <img src="D:\final year  project  1\Hospital-Finder-master\images\shashwat-hospital-kothrud-pune-multispeciality-hospitals-9dzaw.avif" alt="" width="100%">
+            </div>
+            <div class="card-footer">
+              <div class="hname fw-bold">
+                Shashwat Hospital
+              </div>
+              <div class="review">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+              <div class="location">
+                Warje Road, Lane No 3, Kothrud, Pune - 411038 (Dhanukar Circle, Near Prithvi Hotel, Happy Colony)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <img src="D:\final year  project  1\Hospital-Finder-master\images\deoyani-multispeciality-hospital-kothrud-pune-hospitals-w92o5.jpg" alt="" width="100%">
+            </div>
+            <div class="card-footer">
+              <div class="hname fw-bold">
+                Deoyani Multispeciality Hospital
+              </div>
+              <div class="review">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+              <div class="location">
+                Plot No 121, Gandhi Bhavan, Dhanukar Colony, Lane No 4, Kothrud, Pune - 411038
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <img src="D:\final year  project  1\Hospital-Finder-master\images\pmc new.png" alt="" width="100%">
+            </div>
+            <div class="card-footer">
+              <div class="hname fw-bold">
+                PMC New Hospital Warje
+              </div>
+              <div class="review">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+              <div class="location">
+               Hinjewadi Phase 2 Rd, Hinjewadi Rajiv Gandhi Infotech Park, Hinjawadi, Pune, Maharashtra 411057
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End-->
+
+  <!--Footer-->
+  <section class="footer p-3 mt-5 text-light text-center">
+    <div class="container">
+      <p>2025 © <span class="logoName">Wellbee</span>. All rights reserved.</p>
+    </div>
+  </section>
+  <!--End-->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharati Hospital and Research Center Pune</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gallery img {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+        }
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-cover bg-center h-80" style="background-image:url('your-image-url.jpg')">
+        <div class="flex items-center justify-center h-full">
+            <h1 class="text-black text-4xl md:text-6xl font-bold drop-shadow-lg">Welcome to Bharati Hospital</h1>
+        </div>
+    </header>
+
+    <main class="p-6 md:p-12">
+        <section class="text-center">
+            <h2 class="text-3xl font-bold text-teal-600 mb-4">About Bharti Hospital</h2>
+            <p class="text-gray-700 text-lg max-w-3xl mx-auto">Healthcare is the most important aspect of life, and the pandemic has made this true more than ever. At Bharati Vidyapeeth Health Sciences, our exceptional team of doctors, nurses and caregivers come together to bring you excellent care with the latest technologies, best medicine, and warmest service.
+
+                BVMF’S Bharati Hospital is situated on the main Pune – Satara Road in the southern part of Pune city. The teaching hospital occupies 25 acres of land on a sprawling lush green campus.
+                
+                The hospital not only functions for clinical training of undergraduate and postgraduate students but also caters to the medical needs of a large segment of population of South Pune as well as the surrounding rural areas including poor and needy patients.
+            </p>
+        </section>
+
+        <section class="mt-12 grid gap-6 md:grid-cols-3">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <a href="D:\final year  project  1\Hospital-Finder-master\hospital info\bhartiphotogl.html">
+                    <img src="D:\final year  project  1\Hospital-Finder-master\images\bharti hospital bulding.jpg" alt="" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-teal-600"><a href="D:\final year  project  1\Hospital-Finder-master\hospital info\bhartiphotogl.html">Gallery</a></h3>
+                    <p class="text-gray-600">Immerse yourself in the vibrant traditions, music, and cuisine of our community.</p>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden md:col-span-1 md:col-start-3">
+                <a href="D:\final year  project  1\Hospital-Finder-master\hospital info\bhartihospital services.html">
+                    <img src="D:\final year  project  1\Hospital-Finder-master\images\bg3.jpg" alt="" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-teal-600"><a href="D:\final year  project  1\Hospital-Finder-master\hospital info\bhartihospital services.html">Services</a></h3>
+                    <p class="text-gray-600">Immerse yourself in the vibrant traditions, music, and cuisine of our community.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-teal-600 text-white p-6 text-center mt-12">
+        <p>&copy; 2025 [Place Name]. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="">
+        </div>
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            document.getElementById('lightbox').style.display = 'block';
+            document.getElementById('lightbox-img').src = element.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

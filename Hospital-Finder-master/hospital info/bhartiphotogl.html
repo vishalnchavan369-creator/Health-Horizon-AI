@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharti Hospital Photo Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1 {
+            color: #333;
+            padding: 20px;
+            animation: fadeIn 2s ease-in;
+            font-size: 2.5em;
+            font-weight: 600;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bharti Hospital Photo Gallery</h1>
+    <div class="gallery">
+        <img src="D:\final year  project  1\Hospital-Finder-master\hospital info\b1.jpeg" alt="1" onclick="openLightbox(this)">
+        <img src="D:\final year  project  1\Hospital-Finder-master\hospital info\b2.jpeg" alt="2" onclick="openLightbox(this)">
+        <img src="D:\final year  project  1\Hospital-Finder-master\hospital info\b3.jpeg" alt="3" onclick="openLightbox(this)">
+        <img src="D:\final year  project  1\Hospital-Finder-master\hospital info\b4.jpeg" alt="4" onclick="openLightbox(this)">
+        <img src="D:\final year  project  1\Hospital-Finder-master\hospital info\b5.jpeg" alt="5" onclick="openLightbox(this)">
+        <img src="D:\final year  project  1\Hospital-Finder-master\hospital info\b6.jpeg" alt="6" onclick="openLightbox(this)">
+        <img src="D:\final year  project  1\Hospital-Finder-master\hospital info\b7.jpeg" alt="7" onclick="openLightbox(this)">
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="">
+        </div>
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            document.getElementById('lightbox').style.display = 'block';
+            document.getElementById('lightbox-img').src = element.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

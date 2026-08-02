@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEM Hospital and Research Center Pune</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gallery img {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+        }
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-cover bg-center h-80" style="background-image:url('your-image-url.jpg')">
+        <div class="flex items-center justify-center h-full">
+            <h1 class="text-black text-4xl md:text-6xl font-bold drop-shadow-lg">Welcome to KEM Hospital</h1>
+        </div>
+    </header>
+
+    <main class="p-6 md:p-12">
+        <section class="text-center">
+            <h2 class="text-3xl font-bold text-teal-600 mb-4">About KEM Hospital</h2>
+            <p class="text-gray-700 text-lg max-w-3xl mx-auto">**King Edward Memorial (KEM) Hospital and Seth Gordhandas Sunderdas Medical College** is one of India's premier medical institutions, located in Mumbai, Maharashtra. Established in 1926, it is affiliated with the Maharashtra University of Health Sciences (MUHS). The institution provides comprehensive medical education and training to approximately 2,000 students across undergraduate, postgraduate, and super-specialty courses, along with programs in physical and occupational therapy, nursing, and allied specialties. 
+
+                The hospital, equipped with 1,800 beds, serves around 1.8 million out-patients and 85,000 in-patients annually, offering both basic and advanced medical care. With a dedicated team of approximately 390 staff physicians and 550 resident doctors, it delivers high-quality healthcare services. Funded primarily by the Municipal Corporation of Greater Mumbai, KEM Hospital plays a crucial role in providing affordable and often free medical care to underprivileged communities. </p>
+        </section>
+
+        <section class="mt-12 grid gap-6 md:grid-cols-3">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <a href="D:\final year  project  1\Hospital-Finder-master\hospital info\KEMphotogl.html">
+                    <img src="D:\final year  project  1\Hospital-Finder-master\images\bharti hospital bulding.jpg" alt="" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-teal-600"><a href="D:\final year  project  1\Hospital-Finder-master\hospital info\KEMphotogl.html">Gallery</a></h3>
+                    <p class="text-gray-600">Immerse yourself in the vibrant traditions, music, and cuisine of our community.</p>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden md:col-span-1 md:col-start-3">
+                <a href="D:\final year  project  1\Hospital-Finder-master\hospital info\KEMhospital services.html">
+                    <img src="D:\final year  project  1\Hospital-Finder-master\images\bg3.jpg" alt="" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-teal-600"><a href="D:\final year  project  1\Hospital-Finder-master\hospital info\KEMhospital services.html">Services</a></h3>
+                    <p class="text-gray-600">Immerse yourself in the vibrant traditions, music, and cuisine of our community.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-teal-600 text-white p-6 text-center mt-12">
+        <p>&copy; 2025. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="">
+        </div>
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            document.getElementById('lightbox').style.display = 'block';
+            document.getElementById('lightbox-img').src = element.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
